@@ -1,35 +1,30 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import MyImage from '../public/lo'
 
-   
+function CreateHeader() {
+  const myImageRef = useRef(null);
+
+  useEffect(() => {
+    // Access the DOM element using the ref after the component has been rendered
+    const myImage = myImageRef.current;
+
     
- 
+  }, []);
 
-function CreateHeader(){
-
-  return(
-    <header><strong>React</strong>
-    <nav>
-    <img src='./l'/>
-    </nav>
-    
+  return (
+    <header>
+      <strong>React</strong>
+      <nav>
+        <img ref={myImageRef} src="" alt="My Image" />
+      </nav>
     </header>
-  
-
   );
 }
-
-
 
 function MainContent() {
   return (
     <div>
-
-
-      
       <div>This is my first React app.</div>
-
       <ol className="reasons">
         <li>to be better at frontend</li>
         <li>to do better</li>
@@ -40,19 +35,15 @@ function MainContent() {
   );
 }
 
-
-
-function CreateFooter(){
-  return(
+function CreateFooter() {
+  return (
     <footer>
-     work of fidelia
+      work of fidelia
     </footer>
-  )
+  );
 }
 
 const root = document.getElementById('root');
 
 const rootRenderer = ReactDOM.createRoot(root);
-rootRenderer.render(<MainContent />)
-
-
+rootRenderer.render(<MainContent />);
