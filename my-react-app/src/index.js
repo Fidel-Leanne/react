@@ -1,26 +1,58 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import MyImage from '../public/lo'
 
+   
+    
+ 
 
-function TemporaryName(name) {
+function CreateHeader(){
 
   return(
+    <header><strong>React</strong>
+    <nav>
+    <img src='./l'/>
+    </nav>
+    
+    </header>
+  
 
-    <><div>
-      <strong>React</strong>
-      <div>
-        This is my first React app.
-      </div>
+  );
+}
+
+
+
+function MainContent() {
+  return (
+    <div>
+
+
+      
+      <div>This is my first React app.</div>
+
+      <ol className="reasons">
+        <li>to be better at frontend</li>
+        <li>to do better</li>
+        <li>Master web dev</li>
+        <li>learn</li>
+      </ol>
     </div>
-    <ol className="reasons">
-        <li className="reasons">to be better at frontend </li>
-        <li className="reasons">to do better</li>
-        <li className="reasons">Master web dev</li>
-        <li className="reasons">learn</li>
-      </ol></>
+  );
+}
+
+
+
+function CreateFooter(){
+  return(
+    <footer>
+     work of fidelia
+    </footer>
   )
-   
-};
+}
+
+const root = document.getElementById('root');
+
+const rootRenderer = ReactDOM.createRoot(root);
+rootRenderer.render(<MainContent />)
 
 
-ReactDOM.render(<TemporaryName/>, document.getElementById('root'));
