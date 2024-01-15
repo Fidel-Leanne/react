@@ -8,7 +8,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <Main /> {/* Correct casing */}
+      <Main /> 
+      <Main /> 
       
     </>
   );
