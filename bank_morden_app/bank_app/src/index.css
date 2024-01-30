@@ -138,3 +138,10 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+/* Assuming you have a hover class for the glowing effect */
+.hover\:glow:hover .image {
+  box-shadow: 0 0 20px rgba(26, 35, 212, 0.8); /* Adjust the values for the desired glow effect */
+  transition: box-shadow 0.3s ease-in-out; /* Adjust the transition duration as needed */
+}
+
