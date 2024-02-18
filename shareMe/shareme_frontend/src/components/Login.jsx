@@ -3,6 +3,9 @@ import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import shareVideo from '../assets/assets/share.mp4';
+import {jwtDecode} from 'jwt-decode';
+
+
 import logo from '../assets/assets/logowhite.png';
   
 
@@ -12,9 +15,16 @@ const Login = () => {
 
   const responseGoogle = (response) => {
     // Handle Google OAuth response here
-    console.log(response);
-    // Example: Navigate to another page after successful login
-    navigate('/dashboard');
+    
+   console.log(response); // Access user name
+   const decodedToken = jwtDecode(response.credential); // Decode the token
+    
+    console.log(decodedToken);
+
+
+  
+
+    
   }; 
  
 
